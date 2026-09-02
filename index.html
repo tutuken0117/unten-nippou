@@ -8,7 +8,7 @@
 <body style="margin:0;">
 <div id="app-root"></div>
 
-<style>:root{--ink:#1c1f26;--sub:#6b7280;--line:#e3e1da;--paper:#fbfaf7;--card:#ffffff;--accent:#3d6b52;--accent-soft:#eaf1ec;--odo:#dff2e3;--odo-ink:#1f6b3c;--fuel:#ece5f7;--fuel-ink:#5b3f96;--eff:#dcf2f2;--eff-ink:#1f7373;--danger:#c14848;--radius:10px;font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,-apple-system,sans-serif}#app-root *{box-sizing:border-box}#app-root{background:var(--paper);color:var(--ink);min-height:100vh;padding:14px 12px 148px;max-width:720px;margin:0 auto}.topbar{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}.topbar h1{font-size:17px;font-weight:700;letter-spacing:.02em;margin:0}.topbar .month-switch{font-size:13px;color:var(--accent);font-weight:700;cursor:pointer;white-space:nowrap}.month-note{font-size:10px;color:var(--sub);margin:-6px 0 10px;display:flex;justify-content:space-between;align-items:center}.save-badge{font-weight:700}.save-badge.saved{color:var(--accent)}.save-badge.saving{color:var(--sub)}.save-badge.error{color:var(--danger)}.note-right{display:flex;align-items:center;gap:8px}.sync-btn{border:1px solid var(--line);background:var(--card);color:var(--sub);font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap}.sync-input{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;color:var(--ink)}.sync-input:focus{outline:none;border-color:var(--accent)}.pdf-action-btn{display:block;width:100%;text-align:center;padding:13px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:14px;font-weight:700;margin-bottom:8px}.pdf-action-btn.primary{background:var(--accent);color:#fff;border:none}.pdf-note{font-size:11px;color:var(--sub);line-height:1.6;margin-top:6px}.od-disconnect{color:var(--accent);text-decoration:underline;cursor:pointer;}.profile-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.profile-card label{font-size:10px;color:var(--sub);display:block;margin-bottom:2px}.profile-card input{width:100%;border:none;border-bottom:1px solid var(--line);font-size:14px;padding:2px 0;background:transparent;color:var(--ink);font-weight:600}.profile-card input:focus{outline:none;border-bottom-color:var(--accent)}.fixed-value{font-size:14px;font-weight:700;padding:2px 0;border-bottom:1px solid transparent}.undo-banner{display:flex;align-items:center;justify-content:space-between;background:#fff6e5;border:1px solid #f0d999;color:#8a6a1f;border-radius:var(--radius);padding:9px 12px;font-size:12px;margin-bottom:10px}.undo-banner button{border:1px solid #8a6a1f;background:#fff;color:#8a6a1f;font-weight:700;font-size:11.5px;padding:5px 10px;border-radius:7px}.actions{display:flex;gap:8px;margin-bottom:12px}.btn{flex:1;border:none;border-radius:var(--radius);padding:11px 8px;font-size:12.5px;font-weight:700;cursor:pointer;color:#fff;background:var(--accent);letter-spacing:.01em}.btn.secondary{background:var(--card);color:var(--accent);border:1px solid var(--accent)}.btn:active{transform:scale(0.98)}.btn:disabled{opacity:.55}.summary{display:flex;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 4px;margin-bottom:14px;text-align:center}.summary div{flex:1}.summary .num{font-size:16px;font-weight:800}.summary .lab{font-size:9.5px;color:var(--sub);margin-top:2px}.day-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;margin-bottom:8px}.day-card.holiday{border-color:#e8c9c9}.day-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}.day-num{font-size:15px;font-weight:800;width:22px}.day-wd{font-size:11px;font-weight:700;padding:2px 6px;border-radius:5px;background:var(--accent-soft);color:var(--accent)}.day-card.holiday .day-num,.day-card.holiday .day-wd{color:var(--danger)}.day-card.holiday .day-wd{background:#fbeaea}.day-name{font-size:10.5px;color:var(--sub);margin-left:auto}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}.field{background:var(--paper);border-radius:7px;padding:5px 8px}.field.odo{background:var(--odo)}.field.fuel{background:var(--fuel)}.field label{display:block;font-size:9px;color:var(--sub);margin-bottom:1px}.field.odo label{color:var(--odo-ink)}.field.fuel label{color:var(--fuel-ink)}.field input{width:100%;border:none;background:transparent;font-size:14px;font-weight:600;color:var(--ink);-moz-appearance:textfield}.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.field input:focus{outline:none}.field .calc{font-size:13px;font-weight:700}.field.odo .calc{color:var(--odo-ink)}.field.fuel .calc{color:var(--fuel-ink)}.inline-hint{font-size:10px;font-weight:700;margin-top:2px}.odo-hint{color:var(--odo-ink)}.fuel-hint{color:var(--fuel-ink)}.eff-hint{color:var(--eff-ink)}.oil-toggle{display:flex;align-items:center;gap:6px;background:var(--paper);border-radius:7px;padding:7px 10px;font-size:12px;color:var(--sub);margin-bottom:6px}.oil-toggle input{width:16px;height:16px}.dest-row{display:block}.dest-row input{width:100%;border:1px solid var(--line);border-radius:7px;padding:8px 10px;font-size:14px;color:var(--ink)}.dest-row input:focus{outline:none;border-color:var(--accent)}.dest-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}.chip{border:none;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 11px;font-size:11.5px;font-weight:700;white-space:nowrap}.chip:active{opacity:.7}.empty-note{text-align:center;font-size:11px;color:var(--sub);padding:14px 0 4px}.baseline-card{background:#fff9ec;border-color:#f0d999}.baseline-label{font-size:12.5px;font-weight:800;color:#8a6a1f}.hint{font-size:10.5px;color:var(--sub);line-height:1.5;margin-top:2px}.tabs{display:flex;gap:6px;margin-bottom:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px}.tab{flex:1;text-align:center;padding:8px 4px;font-size:12.5px;font-weight:700;color:var(--sub);border-radius:7px;cursor:pointer;background:transparent;border:none}.tab.active{background:var(--accent);color:#fff}.fixed-toolbar{position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -2px 12px rgba(0,0,0,.08);padding:8px 12px calc(10px + env(safe-area-inset-bottom));max-width:720px;margin:0 auto}.fixed-toolbar .tabs{margin-bottom:6px}.fixed-toolbar .actions{display:flex;gap:8px}.preview-table-wrap{display:none}.preview-table-wrap.visible{display:block}.preview-wrap-inner{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:16px 0 24px}.page-frame{background:#fff;width:794px;min-height:1123px;margin:0 auto;padding:34px 30px;box-shadow:0 1px 10px rgba(0,0,0,.12);box-sizing:border-box}.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:11px;width:100%;font-family:"Hiragino Sans","Yu Gothic",sans-serif}.sheet th,.sheet td{border-right:1px solid #333;border-bottom:1px solid #333;padding:7px 3px;text-align:center;color:#1c1f26;white-space:nowrap;line-height:1.3}.sheet tr:first-child th{border-top:1px solid #333}.sheet th:first-child,.sheet td:first-child{border-left:1px solid #333}.sheet thead th{background:#fff;font-weight:700;padding:9px 3px}.sheet .title-row th{background:#fff;font-weight:700;padding:11px 4px}.sheet .title-left{font-size:13px;font-weight:700}.sheet .title-main{font-size:17px;font-weight:800;letter-spacing:.08em}.sheet td.dest{white-space:normal;text-align:center;padding:7px 6px;font-size:12.5px}.sheet td.num{text-align:right;padding-right:8px;font-variant-numeric:tabular-nums}.sheet td.col-dist{background:var(--odo)}.sheet td.col-fdist{background:var(--fuel)}.sheet td.col-eff{background:var(--eff)}.sheet th.col-dist{background:var(--odo)}.sheet th.col-fdist{background:var(--fuel)}.sheet th.col-eff{background:var(--eff)}.sheet tr.holiday td.day-cell{background:transparent;color:#c1392b;font-weight:800}.sheet tr.foot td{font-weight:800;background:#f2f1ec}.modal-backdrop{position:fixed;inset:0;background:rgba(20,20,20,.45);display:flex;align-items:flex-end;justify-content:center;z-index:50}.modal{background:var(--card);width:100%;max-width:480px;border-radius:16px 16px 0 0;padding:20px 18px 26px}.modal h2{font-size:15px;margin:0 0 8px}.modal p{font-size:13px;color:var(--sub);line-height:1.6;margin:0 0 16px}.modal .mbtns{display:flex;gap:8px}.month-list{display:flex;flex-direction:column;gap:6px;max-height:40vh;overflow-y:auto}.month-list-item{text-align:left;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--paper);font-size:13px;font-weight:700;color:var(--ink)}.month-list-item.current{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#1c1f26;color:#fff;font-size:12.5px;padding:9px 16px;border-radius:20px;z-index:60;box-shadow:0 4px 14px rgba(0,0,0,.25)}@media print{.no-print{display:none !important}}.holiday-list{display:flex;flex-direction:column;gap:6px;max-height:35vh;overflow-y:auto;margin-top:4px}.holiday-list-item{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--paper);font-size:13px}.holiday-list-item button{border:1px solid var(--danger);background:#fff;color:var(--danger);font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px}</style>
+<style>:root{--ink:#1c1f26;--sub:#6b7280;--line:#e3e1da;--paper:#fbfaf7;--card:#ffffff;--accent:#3d6b52;--accent-soft:#eaf1ec;--odo:#dff2e3;--odo-ink:#1f6b3c;--fuel:#ece5f7;--fuel-ink:#5b3f96;--eff:#dcf2f2;--eff-ink:#1f7373;--danger:#c14848;--radius:10px;font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,-apple-system,sans-serif}#app-root *{box-sizing:border-box}#app-root{background:var(--paper);color:var(--ink);min-height:100vh;padding:14px 12px 148px;max-width:720px;margin:0 auto}.topbar{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}.topbar h1{font-size:17px;font-weight:700;letter-spacing:.02em;margin:0}.topbar .month-switch{font-size:13px;color:var(--accent);font-weight:700;cursor:pointer;white-space:nowrap}.month-note{font-size:10px;color:var(--sub);margin:-6px 0 10px;display:flex;justify-content:space-between;align-items:center}.save-badge{font-weight:700}.save-badge.saved{color:var(--accent)}.save-badge.saving{color:var(--sub)}.save-badge.error{color:var(--danger)}.note-right{display:flex;align-items:center;gap:8px}.sync-btn{border:1px solid var(--line);background:var(--card);color:var(--sub);font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap}.sync-input{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;color:var(--ink)}.sync-input:focus{outline:none;border-color:var(--accent)}.pdf-action-btn{display:block;width:100%;text-align:center;padding:13px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:14px;font-weight:700;margin-bottom:8px}.pdf-action-btn.primary{background:var(--accent);color:#fff;border:none}.pdf-note{font-size:11px;color:var(--sub);line-height:1.6;margin-top:6px}.od-disconnect{color:var(--accent);text-decoration:underline;cursor:pointer;}.profile-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.profile-card label{font-size:10px;color:var(--sub);display:block;margin-bottom:2px}.profile-card input{width:100%;border:none;border-bottom:1px solid var(--line);font-size:14px;padding:2px 0;background:transparent;color:var(--ink);font-weight:600}.profile-card input:focus{outline:none;border-bottom-color:var(--accent)}.fixed-value{font-size:14px;font-weight:700;padding:2px 0;border-bottom:1px solid transparent}.undo-banner{display:flex;align-items:center;justify-content:space-between;background:#fff6e5;border:1px solid #f0d999;color:#8a6a1f;border-radius:var(--radius);padding:9px 12px;font-size:12px;margin-bottom:10px}.undo-banner button{border:1px solid #8a6a1f;background:#fff;color:#8a6a1f;font-weight:700;font-size:11.5px;padding:5px 10px;border-radius:7px}.actions{display:flex;gap:8px;margin-bottom:12px}.btn{flex:1;border:none;border-radius:var(--radius);padding:11px 8px;font-size:12.5px;font-weight:700;cursor:pointer;color:#fff;background:var(--accent);letter-spacing:.01em}.btn.secondary{background:var(--card);color:var(--accent);border:1px solid var(--accent)}.btn:active{transform:scale(0.98)}.btn:disabled{opacity:.55}.summary{display:flex;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 4px;margin-bottom:14px;text-align:center}.summary div{flex:1}.summary .num{font-size:16px;font-weight:800}.summary .lab{font-size:9.5px;color:var(--sub);margin-top:2px}.day-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;margin-bottom:8px}.day-card.holiday{border-color:#e8c9c9}.day-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}.day-num{font-size:15px;font-weight:800;width:22px}.day-wd{font-size:11px;font-weight:700;padding:2px 6px;border-radius:5px;background:var(--accent-soft);color:var(--accent)}.day-card.holiday .day-num,.day-card.holiday .day-wd{color:var(--danger)}.day-card.holiday .day-wd{background:#fbeaea}.day-name{font-size:10.5px;color:var(--sub);margin-left:auto}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}.field{background:var(--paper);border-radius:7px;padding:5px 8px}.field.odo{background:var(--odo)}.field.fuel{background:var(--fuel)}.field label{display:block;font-size:9px;color:var(--sub);margin-bottom:1px}.field.odo label{color:var(--odo-ink)}.field.fuel label{color:var(--fuel-ink)}.field input{width:100%;border:none;background:transparent;font-size:14px;font-weight:600;color:var(--ink);-moz-appearance:textfield}.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.field input:focus{outline:none}.field .calc{font-size:13px;font-weight:700}.field.odo .calc{color:var(--odo-ink)}.field.fuel .calc{color:var(--fuel-ink)}.inline-hint{font-size:10px;font-weight:700;margin-top:2px}.odo-hint{color:var(--odo-ink)}.fuel-hint{color:var(--fuel-ink)}.eff-hint{color:var(--eff-ink)}.oil-toggle{display:flex;align-items:center;gap:6px;background:var(--paper);border-radius:7px;padding:7px 10px;font-size:12px;color:var(--sub);margin-bottom:6px}.oil-toggle input{width:16px;height:16px}.dest-row{display:block}.dest-row input{width:100%;border:1px solid var(--line);border-radius:7px;padding:8px 10px;font-size:14px;color:var(--ink)}.dest-row input:focus{outline:none;border-color:var(--accent)}.dest-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}.chip{border:none;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 11px;font-size:11.5px;font-weight:700;white-space:nowrap}.chip:active{opacity:.7}.empty-note{text-align:center;font-size:11px;color:var(--sub);padding:14px 0 4px}.baseline-card{background:#fff9ec;border-color:#f0d999}.baseline-label{font-size:12.5px;font-weight:800;color:#8a6a1f}.hint{font-size:10.5px;color:var(--sub);line-height:1.5;margin-top:2px}.tabs{display:flex;gap:6px;margin-bottom:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px}.tab{flex:1;text-align:center;padding:8px 4px;font-size:12.5px;font-weight:700;color:var(--sub);border-radius:7px;cursor:pointer;background:transparent;border:none}.tab.active{background:var(--accent);color:#fff}.fixed-toolbar{position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -2px 12px rgba(0,0,0,.08);padding:8px 12px calc(10px + env(safe-area-inset-bottom));max-width:720px;margin:0 auto}.fixed-toolbar .tabs{margin-bottom:6px}.fixed-toolbar .actions{display:flex;gap:8px}.preview-table-wrap{display:none}.preview-table-wrap.visible{display:block}.preview-wrap-inner{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:16px 0 24px}.page-frame{background:#fff;width:794px;min-height:1123px;margin:0 auto;padding:34px 30px;box-shadow:0 1px 10px rgba(0,0,0,.12);box-sizing:border-box}.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:11px;width:100%;font-family:"Hiragino Sans","Yu Gothic",sans-serif}.sheet th,.sheet td{border-right:1px solid #333;border-bottom:1px solid #333;padding:7px 3px;text-align:center;color:#1c1f26;white-space:nowrap;line-height:1.3}.sheet tr:first-child th{border-top:1px solid #333}.sheet th:first-child,.sheet td:first-child{border-left:1px solid #333}.sheet thead th{background:#fff;font-weight:700;padding:9px 3px}.sheet .title-row th{background:#fff;font-weight:700;padding:11px 4px}.sheet .title-left{font-size:13px;font-weight:700}.sheet .title-main{font-size:17px;font-weight:800;letter-spacing:.08em}.sheet td.dest{white-space:normal;text-align:center;padding:7px 6px;font-size:12.5px}.sheet td.num{text-align:right;padding-right:8px;font-variant-numeric:tabular-nums}.sheet td.col-dist{background:var(--odo)}.sheet td.col-fdist{background:var(--fuel)}.sheet td.col-eff{background:var(--eff)}.sheet th.col-dist{background:var(--odo)}.sheet th.col-fdist{background:var(--fuel)}.sheet th.col-eff{background:var(--eff)}.sheet tr.holiday td.day-cell{background:transparent;color:#c1392b;font-weight:800}.sheet tr.foot td{font-weight:800;background:#f2f1ec}.modal-backdrop{position:fixed;inset:0;background:rgba(20,20,20,.45);display:flex;align-items:flex-end;justify-content:center;z-index:50}.modal{background:var(--card);width:100%;max-width:480px;border-radius:16px 16px 0 0;padding:20px 18px 26px}.modal h2{font-size:15px;margin:0 0 8px}.modal p{font-size:13px;color:var(--sub);line-height:1.6;margin:0 0 16px}.modal .mbtns{display:flex;gap:8px}.month-list{display:flex;flex-direction:column;gap:6px;max-height:40vh;overflow-y:auto}.month-list-item{text-align:left;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--paper);font-size:13px;font-weight:700;color:var(--ink)}.month-list-item.current{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#1c1f26;color:#fff;font-size:12.5px;padding:9px 16px;border-radius:20px;z-index:60;box-shadow:0 4px 14px rgba(0,0,0,.25)}@media print{.no-print{display:none !important}}.holiday-list{display:flex;flex-direction:column;gap:6px;max-height:35vh;overflow-y:auto;margin-top:4px}.holiday-list-item{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--paper);font-size:13px}.holiday-list-item button{border:1px solid var(--danger);background:#fff;color:var(--danger);font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px}.past-month-notice{font-size:11px;color:var(--sub);line-height:1.6;text-align:center;padding:4px 2px}.past-month-notice .link{color:var(--accent);font-weight:700;text-decoration:underline;cursor:pointer;margin-left:4px}</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
@@ -361,6 +361,7 @@ function App(){
   const [monthList, setMonthList] = useState([]);
   const [customHolidays, setCustomHolidays] = useState([]);
   const [showHolidayEditor, setShowHolidayEditor] = useState(false);
+  const [showRepair, setShowRepair] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
   const [pendingKey, setPendingKey] = useState(null);
   const [toast, setToast] = useState(null);
@@ -484,9 +485,6 @@ function App(){
     const p = await safeGet('profile');
     if(p) setProfile({...p, driverName:"佐々木晃史"});
 
-    const b = await safeGet('baseline');
-    if(b) setBaseline(b);
-
     const ui = await safeGet('undoInfo');
     if(ui) setUndoInfo(ui);
 
@@ -514,7 +512,7 @@ function App(){
       if(now.getFullYear() === 2026 && now.getMonth()+1 === 7){
         const seedBaseline = { odo: SEED_2026_07.baseline.odo, fuelOdo: SEED_2026_07.baseline.fuelOdo };
         setBaseline(seedBaseline);
-        await safeSet('baseline', seedBaseline);
+        await safeSet(`baseline:${curKey}`, seedBaseline);
       }
       setReady(true);
       return;
@@ -525,6 +523,7 @@ function App(){
       const data = await safeGet(`month:${active}`) || emptyMonth(...active.split('-').map(Number));
       setActiveKey(active);
       setMonthData(data);
+      setBaseline(await loadBaselineFor(active));
       setPendingKey(curKey);
       setShowRollover(true);
       setReady(true);
@@ -534,6 +533,7 @@ function App(){
     const data = await safeGet(`month:${active}`) || emptyMonth(now.getFullYear(), now.getMonth()+1);
     setActiveKey(active);
     setMonthData(data);
+    setBaseline(await loadBaselineFor(active));
     setReady(true);
   }
 
@@ -576,7 +576,7 @@ function App(){
 
   async function doRollover(saveFirst){
     if(saveFirst){ triggerPrint(); }
-    // 今月データから最後の入庫時・給油時を拾ってbaselineへ
+    // 今月データから最後の入庫時・給油時を拾って翌月のbaselineへ
     let lastOdo = null, lastFuel = null;
     for(let i=monthData.days.length-1;i>=0;i--){
       const d = monthData.days[i];
@@ -594,8 +594,10 @@ function App(){
     setUndoInfo(undo);
     await safeSet('undoInfo', undo);
 
+    // 今の月のbaselineはそのまま保持し、翌月用のbaselineを別途保存する
+    await safeSet(`baseline:${activeKey}`, baseline);
+    await safeSet(`baseline:${pendingKey}`, newBaseline);
     setBaseline(newBaseline);
-    await safeSet('baseline', newBaseline);
 
     const [ny, nm] = pendingKey.split('-').map(Number);
     // 既にそのキーでデータが存在する場合（一度リセットしてから戻し、また進めた場合など）は上書きしない
@@ -614,7 +616,7 @@ function App(){
     if(!undoInfo) return;
     const data = await safeGet(`month:${undoInfo.fromKey}`) || emptyMonth(...undoInfo.fromKey.split('-').map(Number));
     setBaseline(undoInfo.prevBaseline);
-    await safeSet('baseline', undoInfo.prevBaseline);
+    await safeSet(`baseline:${undoInfo.fromKey}`, undoInfo.prevBaseline);
     await safeSet('activeMonth', undoInfo.fromKey);
     setActiveKey(undoInfo.fromKey);
     setMonthData(data);
@@ -623,12 +625,64 @@ function App(){
     showToast(`${undoInfo.fromKey}分に戻しました`);
   }
 
+  async function repairAllBaselines(){
+    const keys = [...monthList].sort();
+    if(keys.length === 0){ showToast('修復対象の月がありません'); return; }
+
+    // 一番古い月のbaselineはそのまま基準として使う（手入力された正しい値のはず）
+    let prevBaseline = await loadBaselineFor(keys[0]);
+    await safeSet(`baseline:${keys[0]}`, prevBaseline);
+
+    let fixedCount = 0;
+    for(let i=0; i<keys.length; i++){
+      const key = keys[i];
+      const data = await safeGet(`month:${key}`);
+      if(!data || !data.days) continue;
+
+      // この月の最後に入力された入庫時・給油時を拾う
+      let lastOdo = null, lastFuel = null;
+      for(let j=data.days.length-1; j>=0; j--){
+        const d = data.days[j];
+        if(lastOdo===null && d.odo!=="" && !isNaN(parseFloat(d.odo))) lastOdo = parseFloat(d.odo);
+        if(lastFuel===null && d.fuelOdo!=="" && !isNaN(parseFloat(d.fuelOdo))) lastFuel = parseFloat(d.fuelOdo);
+        if(lastOdo!==null && lastFuel!==null) break;
+      }
+
+      // 翌月があれば、その月のbaselineを今月の最終値で上書きする
+      const nextKey = keys[i+1];
+      if(nextKey){
+        const nextBaseline = {
+          odo: lastOdo!==null ? lastOdo : prevBaseline.odo,
+          fuelOdo: lastFuel!==null ? lastFuel : prevBaseline.fuelOdo,
+        };
+        await safeSet(`baseline:${nextKey}`, nextBaseline);
+        prevBaseline = nextBaseline;
+        fixedCount++;
+      }
+    }
+
+    // 表示中の月のbaselineを読み直す
+    setBaseline(await loadBaselineFor(activeKey));
+    showToast(`${fixedCount}か月分の「先月の最終」を修復しました`);
+    setShowRepair(false);
+  }
+
+  async function loadBaselineFor(key){
+    const perMonth = await safeGet(`baseline:${key}`);
+    if(perMonth) return perMonth;
+    // 旧形式（全月共通）からの移行：最新月のみ引き継ぐ
+    const legacy = await safeGet('baseline');
+    return legacy || {odo:"", fuelOdo:""};
+  }
+
   async function switchToMonth(key){
     if(key === activeKey){ setShowHistory(false); return; }
     const data = await safeGet(`month:${key}`) || emptyMonth(...key.split('-').map(Number));
+    const b = await loadBaselineFor(key);
     await safeSet('activeMonth', key);
     setActiveKey(key);
     setMonthData(data);
+    setBaseline(b);
     setShowHistory(false);
     showToast(`${key}分を表示しています`);
   }
@@ -708,12 +762,12 @@ function App(){
         return;
       }
       const canvas = await withTimeout(
-        html2canvas(el, {scale:2, backgroundColor:'#ffffff', useCORS:true}),
+        html2canvas(el, {scale:1.6, backgroundColor:'#ffffff', useCORS:true}),
         12000, 'PDF画像の作成'
       );
-      const imgData = canvas.toDataURL('image/png');
+      const imgData = canvas.toDataURL('image/jpeg', 0.92);
       const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF({orientation:'portrait', unit:'pt', format:'a4'});
+      const pdf = new jsPDF({orientation:'portrait', unit:'pt', format:'a4', compress:true});
       const margin = 24;
       const pageW = pdf.internal.pageSize.getWidth() - margin*2;
       const pageH = pdf.internal.pageSize.getHeight() - margin*2;
@@ -721,7 +775,7 @@ function App(){
       let h = (canvas.height * w) / canvas.width;
       if(h > pageH){ h = pageH; w = (canvas.width * h) / canvas.height; }
       const x = margin + (pageW - w)/2;
-      pdf.addImage(imgData, 'PNG', x, margin, w, h);
+      pdf.addImage(imgData, 'JPEG', x, margin, w, h);
       const fname = `運転日報${monthData.year}年${monthData.month}月.pdf`;
       const pdfBlob = pdf.output('blob');
       setPdfReady({blob: pdfBlob, fname});
@@ -766,6 +820,7 @@ function App(){
   }
 
   const holidayMap = useMemo(() => monthData ? holidaySetForYear(monthData.year) : new Map(), [monthData && monthData.year]);
+  const isLatestMonth = monthList.length===0 || activeKey === [...monthList].sort().slice(-1)[0];
   const customHolidaySet = useMemo(() => new Set(customHolidays), [customHolidays]);
 
   function isCustomHoliday(date){ return customHolidaySet.has(ymd2(date)); }
@@ -834,6 +889,7 @@ function App(){
             {syncCode ? (syncState==='syncing' ? '☁ 同期中…' : syncState==='error' ? '☁ 同期エラー' : '☁ 同期中(端末間)') : '☁ 端末間で同期する'}
           </button>
           <button className="sync-btn" onClick={()=>setShowHolidayEditor(true)}>休日を編集</button>
+          <button className="sync-btn" onClick={()=>setShowRepair(true)}>データ修復</button>
         </span>
       </div>
 
@@ -888,14 +944,14 @@ function App(){
             <label>入庫時(km)</label>
             <input type="number" inputMode="numeric" value={baseline.odo}
               onChange={e=>{
-                const b = {...baseline, odo:e.target.value}; setBaseline(b); safeSet('baseline', b);
+                const b = {...baseline, odo:e.target.value}; setBaseline(b); safeSet(`baseline:${activeKey}`, b);
               }} placeholder="例）15472" />
           </div>
           <div className="field fuel" style={{marginBottom:6}}>
             <label>給油時(km)</label>
             <input type="number" inputMode="numeric" value={baseline.fuelOdo}
               onChange={e=>{
-                const b = {...baseline, fuelOdo:e.target.value}; setBaseline(b); safeSet('baseline', b);
+                const b = {...baseline, fuelOdo:e.target.value}; setBaseline(b); safeSet(`baseline:${activeKey}`, b);
               }} placeholder="例）15389" />
           </div>
           <div className="hint">ここが空のままだと、月初の走行距離が正しく計算できません。前回の走行日誌の最終値を入力してください。</div>
@@ -1070,6 +1126,26 @@ function App(){
         </div>
       )}
 
+      {showRepair && (
+        <div className="modal-backdrop no-print" onClick={()=>setShowRepair(false)}>
+          <div className="modal" onClick={e=>e.stopPropagation()}>
+            <h2>データの修復</h2>
+            <p>
+              各月の「先月の最終」を、その前の月の最終入力値から順番に計算し直します。
+              月が正しく引き継がれず走行距離がおかしくなっている場合に使ってください。
+            </p>
+            <p style={{fontSize:12}}>
+              <strong>一番古い月（{[...monthList].sort()[0] || '―'}）の「先月の最終」は基準として使うので、修復前に正しい値になっているか確認してください。</strong>
+              日々の入力データ（入庫時・行き先など）は変更されません。
+            </p>
+            <div className="mbtns">
+              <button className="btn secondary" onClick={()=>setShowRepair(false)} style={{flex:1}}>やめる</button>
+              <button className="btn" onClick={repairAllBaselines} style={{flex:2}}>修復を実行する</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {showHolidayEditor && (
         <div className="modal-backdrop no-print" onClick={()=>setShowHolidayEditor(false)}>
           <div className="modal" onClick={e=>e.stopPropagation()}>
@@ -1140,8 +1216,18 @@ function App(){
           <button className={"tab" + (view==='preview'?' active':'')} onClick={()=>setView('preview')}>提出用プレビュー</button>
         </div>
         <div className="actions">
-          <button className="btn" onClick={()=>{ setPendingKey(nextMonthKey(monthData)); setShowRollover(true); }}>PDFに保存・翌月の準備</button>
+          <button className="btn secondary" onClick={triggerPrint} disabled={pdfBusy}>
+            {pdfBusy ? '作成中…' : 'PDFのみ出力'}
+          </button>
+          {isLatestMonth && (
+            <button className="btn" onClick={()=>{ setPendingKey(nextMonthKey(monthData)); setShowRollover(true); }}>PDFに保存・翌月の準備</button>
+          )}
         </div>
+        {!isLatestMonth && (
+          <div className="past-month-notice">
+            過去の月（{activeKey}）を表示中です。翌月の準備は最新の月からのみ行えます。<span className="link" onClick={()=>switchToMonth([...monthList].sort().slice(-1)[0])}>最新の月に戻る</span>
+          </div>
+        )}
       </div>
     </React.Fragment>
   );
