@@ -540,7 +540,38 @@ function App(){
   const persistMonth = useCallback(async (key, data) => {
     setMonthData(data);
     await safeSet(`month:${key}`, data);
-  }, []);
+    // この月より後の月がすでに作られている場合、その「先月の最終」を自動で追従させる
+    await cascadeBaselines(key, data);
+  }, [monthList]);
+
+  // 指定した月の内容をもとに、それ以降の月の baseline を順番に更新する
+  async function cascadeBaselines(startKey, startData){
+    const keys = [...monthList].sort();
+    const idx = keys.indexOf(startKey);
+    if(idx === -1 || idx === keys.length - 1) return; // 後続の月がなければ何もしない
+
+    let prev = await loadBaselineFor(startKey);
+    let currentData = startData;
+
+    for(let i = idx; i < keys.length - 1; i++){
+      if(!currentData || !currentData.days) break;
+      let lastOdo = null, lastFuel = null;
+      for(let j = currentData.days.length - 1; j >= 0; j--){
+        const d = currentData.days[j];
+        if(lastOdo===null && d.odo!=="" && !isNaN(parseFloat(d.odo))) lastOdo = parseFloat(d.odo);
+        if(lastFuel===null && d.fuelOdo!=="" && !isNaN(parseFloat(d.fuelOdo))) lastFuel = parseFloat(d.fuelOdo);
+        if(lastOdo!==null && lastFuel!==null) break;
+      }
+      const nextKey = keys[i+1];
+      const nextBaseline = {
+        odo: lastOdo!==null ? lastOdo : prev.odo,
+        fuelOdo: lastFuel!==null ? lastFuel : prev.fuelOdo,
+      };
+      await safeSet(`baseline:${nextKey}`, nextBaseline);
+      prev = nextBaseline;
+      currentData = await safeGet(`month:${nextKey}`);
+    }
+  }
 
   const [crossMonthDests, setCrossMonthDests] = useState([]);
 
@@ -944,14 +975,14 @@ function App(){
             <label>入庫時(km)</label>
             <input type="number" inputMode="numeric" value={baseline.odo}
               onChange={e=>{
-                const b = {...baseline, odo:e.target.value}; setBaseline(b); safeSet(`baseline:${activeKey}`, b);
+                const b = {...baseline, odo:e.target.value}; setBaseline(b); safeSet(`baseline:${activeKey}`, b).then(()=>cascadeBaselines(activeKey, monthData));
               }} placeholder="例）15472" />
           </div>
           <div className="field fuel" style={{marginBottom:6}}>
             <label>給油時(km)</label>
             <input type="number" inputMode="numeric" value={baseline.fuelOdo}
               onChange={e=>{
-                const b = {...baseline, fuelOdo:e.target.value}; setBaseline(b); safeSet(`baseline:${activeKey}`, b);
+                const b = {...baseline, fuelOdo:e.target.value}; setBaseline(b); safeSet(`baseline:${activeKey}`, b).then(()=>cascadeBaselines(activeKey, monthData));
               }} placeholder="例）15389" />
           </div>
           <div className="hint">ここが空のままだと、月初の走行距離が正しく計算できません。前回の走行日誌の最終値を入力してください。</div>
@@ -1131,8 +1162,8 @@ function App(){
           <div className="modal" onClick={e=>e.stopPropagation()}>
             <h2>データの修復</h2>
             <p>
-              各月の「先月の最終」を、その前の月の最終入力値から順番に計算し直します。
-              月が正しく引き継がれず走行距離がおかしくなっている場合に使ってください。
+              通常は入力するたびに翌月以降の「先月の最終」が自動で更新されるので、この操作は不要です。
+              以前のバージョンで作った月のデータがずれている場合など、まとめて計算し直したいときに使ってください。
             </p>
             <p style={{fontSize:12}}>
               <strong>一番古い月（{[...monthList].sort()[0] || '―'}）の「先月の最終」は基準として使うので、修復前に正しい値になっているか確認してください。</strong>
